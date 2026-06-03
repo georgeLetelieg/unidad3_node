@@ -33,7 +33,7 @@ const router = express.Router();
 // Base de datos temporal en memoria
 let users = [
     {id: 1, nombre: 'Daniel', edad: 33},
-    {id: 2, nombre: 'Franco', edad: 3},
+    {id: 2, nombre: 'Franco letelier', edad: 3},
     {id: 3, nombre: 'Salvador', edad: 99},
 
 ];

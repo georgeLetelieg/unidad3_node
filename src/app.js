@@ -10,8 +10,10 @@ app.use(logger);
 //rutas
 app.use('/usuario', usersRouter);
 
-app.listen(3000,
+const PORT = 3002;
+
+app.listen(PORT,
     () => {
-        console.log('hola');
+        console.log('hola', PORT);
     }
 );
