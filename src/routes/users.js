@@ -43,6 +43,33 @@ router.get('/', (req, res) => {
     res.json(users);
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+router.post(
+    '/', (req, res) => {
+
+        const {nombre, edad} = req.body;
+        const nuevoId = users.length > 0 ? users [users.length -1].id + 1 : 1;
+        const nuevoUsuario = {id: nuevoId, nombre, edad};
+        //hacemos uso del empujar
+        users.push(nuevoUsuario);
+
+        res.status(201).json(nuevoUsuario);
+        //{"nombre": "Maria", "edad":25}
+    }
+);
+
+
 // GET /usuario/:id - obtener uno por id / select * from users where id = 1
 
 router.get('/:id', (req, res) =>{
@@ -56,5 +83,6 @@ router.get('/:id', (req, res) =>{
     }
     res.json(user);
 });
+
 
 module.exports = router;
